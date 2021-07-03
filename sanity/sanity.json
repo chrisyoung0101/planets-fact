@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "rua1qhj8",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "planets-fact-site"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/google-maps-input"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}
