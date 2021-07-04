@@ -1,24 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Nav from '../components/Nav';
-
-const PlanetStyles = styled.div`
-  .source {
-    font-weight: 400;
-    color: var(--lightgrey);
-  }
-  a {
-    font-family: 'Spartan', sans-serif;
-    font-weight: 700;
-    color: var(--lightgrey);
-  }
-`;
 
 export default function Mercury() {
   return (
     <Layout>
-      {/* <PlanetStyles> */}
       <body>
         <h1>Mercury</h1>
         <p>
@@ -32,7 +18,6 @@ export default function Mercury() {
           <a href="https://en.wikipedia.org/wiki/Mercury_(planet)">Wikipedia</a>
         </div>
       </body>
-      {/* </PlanetStyles> */}
     </Layout>
   );
 }
