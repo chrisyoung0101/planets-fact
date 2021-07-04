@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Button = ({ text }) => {
+export default function Button({ text }) {
   return <button>{text}</button>;
-};
-
-export default Button;
+}
