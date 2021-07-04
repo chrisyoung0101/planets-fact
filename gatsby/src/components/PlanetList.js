@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import Layout from './Layout';
+import Button from './button';
 
 function SinglePlanet({ planet }) {
   return (
@@ -12,6 +13,9 @@ function SinglePlanet({ planet }) {
         <br />
         {planet.overviewSource}
         <br />
+        <Button text="OVERVIEW" />
+        <Button text="INTERNAL STRUCTURE" />
+        <Button text="SURFACE GEOLOGY" />
       </div>
     </Layout>
   );
