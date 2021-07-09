@@ -16,6 +16,7 @@ const NavStyles = styled.div`
     /* give the text in the navbar a color */
     color: white;
     height: 85px;
+    margin-bottom: 121px;
   }
 
   .rectangle {

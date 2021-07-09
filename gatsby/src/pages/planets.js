@@ -25,7 +25,7 @@ export const query = graphql`
         overviewSource
         overviewImage {
           asset {
-            fixed(width: 400, height: 400) {
+            fixed(width: 290, height: 290) {
               ...GatsbySanityImageFixed
             }
             fluid(maxWidth: 50) {
