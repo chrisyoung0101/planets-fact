@@ -20,8 +20,8 @@ grid-item styling by type :
 flexbox-container-sidebar : flexbox container for sidebar items
 flexbox-container-footer : flexbox container for footer items
 flexbox-item : commone to all flexbox items
-flex-sidebar-item : specific to sidebar items
-flex-footer-item : specific to footer items */
+flex-item-sidebar : specific to sidebar items
+flex-item-footer : specific to footer items */
 
   /* Flexbox */
 
@@ -33,7 +33,7 @@ flex-footer-item : specific to footer items */
     flex-direction: column;
   }
 
-  .flex-sidebar-item {
+  .flex-item-sidebar {
     display: flex;
     width: 200px;
     ${'' /* position: relative; */}
@@ -42,15 +42,17 @@ flex-footer-item : specific to footer items */
 
   .flexbox-container-footer {
     display: flex;
-    position: relative;
+    ${'' /* position: relative; */}
     justify-content: space-between;
     background-color: blue;
+    border: 3px dotted red;
   }
 
-  .flex-footer-item {
+  .flex-item-footer {
     display: flex;
-    position: relative;
+    ${'' /* position: relative; */}
     min-height: 100px;
+    border: 1px solid green;
   }
 
   /* Grid */
@@ -69,7 +71,7 @@ flex-footer-item : specific to footer items */
   }
 
   .grid-item-footer {
-    grid-area: footer;
+    grid-area: grid-item-footer;
     border: 1px solid white;
   }
 
@@ -80,9 +82,9 @@ flex-footer-item : specific to footer items */
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       'grid-item-content grid-item-content grid-item-sidebar '
-      'footer  footer  footer';
+      'grid-item-footer grid-item-footer grid-item-footer';
     background-color: rgb(226, 167, 17);
-    border: 1px solid white;
+    border: 5px solid green;
   }
 
   .grid-item-footer {
@@ -100,39 +102,34 @@ function SinglePlanet({ planet }) {
           </div>
           <div className="grid-item grid-item-sidebar">
             <div className="flexbox-container-sidebar">
-              <div className="flexbox-item flex-sidebar-item">
-                {planet.name}
-              </div>
-              <div className="flexbox-item flex-sidebar-item">
-                {planet.overviewContent}
-              </div>
-              <div className="flexbox-item flex-sidebar-item">
-                {planet.overviewSource}
-              </div>
-              <div className="flexbox-item flex-sidebar-item">
+              <div className="flex-item-sidebar">{planet.name}</div>
+              <div className="flex-item-sidebar">{planet.overviewContent}</div>
+              <div className="flex-item-sidebar">{planet.overviewSource}</div>
+              <div className="flex-item-sidebar">
                 <Button text="OVERVIEW" />
               </div>
-              <div className="flexbox-item flex-sidebar-item">
+              <div className="flex-item-sidebar">
                 <Button text="INTERNAL STRUCTURE" />
               </div>
-              <div className="flexbox-item flex-sidebar-item">
+              <div className="flex-item-sidebar">
                 <Button text="SURFACE GEOLOGY" />
               </div>
             </div>
           </div>
-          <div className="grid-item grid-item-footer" />
-          <div className="flexbox-container-footer">
-            <div className="flexbox-item flex-footer-item">
-              <InfoTangle titleText="ROTATION TIME" bodyText="58.6 DAYS" />
-            </div>
-            <div className="flexbox-item flex-footer-item">
-              <InfoTangle titleText="REVOLUTION TIME" bodyText="87.97 DAYS" />
-            </div>
-            <div className="flexbox-item flex-footer-item">
-              <InfoTangle titleText="RADIUS" bodyText="2,439.7 KM" />
-            </div>
-            <div className="flexbox-item flex-footer-item">
-              <InfoTangle titleText="AVERAGE TEMP." bodyText="430˚ C" />
+          <div className="grid-item grid-item-footer">
+            <div className="flexbox-container-footer">
+              <div className="flex-item-footer">
+                <InfoTangle titleText="ROTATION TIME" bodyText="58.6 DAYS" />
+              </div>
+              <div className="flex-item-footer">
+                <InfoTangle titleText="REVOLUTION TIME" bodyText="87.97 DAYS" />
+              </div>
+              <div className="flex-item-footer">
+                <InfoTangle titleText="RADIUS" bodyText="2,439.7 KM" />
+              </div>
+              <div className="flex-item-footer">
+                <InfoTangle titleText="AVERAGE TEMP." bodyText="430˚ C" />
+              </div>
             </div>
           </div>
         </div>
